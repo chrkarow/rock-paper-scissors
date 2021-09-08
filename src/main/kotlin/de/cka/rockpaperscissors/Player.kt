@@ -1,5 +1,9 @@
 package de.cka.rockpaperscissors
 
+/**
+ * A Player of Rock-Paper-Scissors who is responsible
+ * for choosing a GameElement and keeping track of the results per round.
+ */
 class Player(
     private val name: String,
     private val strategy: ChoosingStrategy,

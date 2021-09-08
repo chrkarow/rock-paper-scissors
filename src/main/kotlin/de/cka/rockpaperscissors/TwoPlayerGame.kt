@@ -1,5 +1,9 @@
 package de.cka.rockpaperscissors
 
+/**
+ * A game of Rock-Paper-Scissors for two players which is repeatedly
+ * played over the given number of rounds.
+ */
 class TwoPlayerGame(
     private val player1: Player,
     private val player2: Player,
