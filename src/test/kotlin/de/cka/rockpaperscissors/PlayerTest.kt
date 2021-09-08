@@ -13,12 +13,12 @@ internal class PlayerTest {
 
         // GIVEN
         val returnedGameElement = GameElement.PAPER
-        val strategyMock = mock<Strategy> {
+        val choosingStrategyMock = mock<ChoosingStrategy> {
             on { choose() } doReturn returnedGameElement
         }
 
         val player = Player(
-            strategy = strategyMock,
+            strategy = choosingStrategyMock,
             name = "Test"
         )
 
@@ -27,7 +27,7 @@ internal class PlayerTest {
 
         // THEN
         assertThat(result).isEqualTo(returnedGameElement)
-        verify(strategyMock).choose()
+        verify(choosingStrategyMock).choose()
     }
 
     @Test

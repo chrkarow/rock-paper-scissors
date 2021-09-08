@@ -2,7 +2,7 @@ package de.cka.rockpaperscissors
 
 class Player(
     private val name: String,
-    private val strategy: Strategy,
+    private val strategy: ChoosingStrategy,
 ) {
 
     private enum class GameResult {

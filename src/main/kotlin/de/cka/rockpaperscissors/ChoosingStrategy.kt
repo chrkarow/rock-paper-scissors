@@ -1,16 +1,16 @@
 package de.cka.rockpaperscissors
 
-interface Strategy {
+interface ChoosingStrategy {
     val name: String
     fun choose(): GameElement
 }
 
-object OnlyRockStrategy : Strategy {
+object OnlyRockChoosingStrategy : ChoosingStrategy {
     override val name: String = "Only Rock"
     override fun choose() = GameElement.ROCK
 }
 
-object RandomStrategy : Strategy {
+object RandomChoosingStrategy : ChoosingStrategy {
     override val name: String = "Random"
     override fun choose() = GameElement.values().random()
 }
