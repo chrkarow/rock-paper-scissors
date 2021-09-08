@@ -3,14 +3,14 @@ package de.cka.rockpaperscissors
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-internal class ResultTest{
+internal class GameElementTest{
 
     @Test
-    internal fun `Rock should beat Scissors`() {
+    internal fun `rock should beat scissors`() {
 
         // GIVEN
-        val rock = Result.ROCK
-        val scissors = Result.SCISSORS
+        val rock = GameElement.ROCK
+        val scissors = GameElement.SCISSORS
 
         // WHEN
         val result = rock.beats(scissors)
@@ -20,11 +20,11 @@ internal class ResultTest{
     }
 
     @Test
-    internal fun `Rock should not beat Paper`() {
+    internal fun `rock should not beat paper`() {
 
         // GIVEN
-        val rock = Result.ROCK
-        val paper = Result.PAPER
+        val rock = GameElement.ROCK
+        val paper = GameElement.PAPER
 
         // WHEN
         val result = rock.beats(paper)
@@ -35,10 +35,10 @@ internal class ResultTest{
     }
 
     @Test
-    internal fun `Scissors should beat Paper`() {
+    internal fun `scissors should beat paper`() {
         // GIVEN
-        val scissors = Result.SCISSORS
-        val paper = Result.PAPER
+        val scissors = GameElement.SCISSORS
+        val paper = GameElement.PAPER
 
         // WHEN
         val result = scissors.beats(paper)
@@ -48,10 +48,10 @@ internal class ResultTest{
     }
 
     @Test
-    internal fun `Scissors should not beat Rock`() {
+    internal fun `scissors should not beat rock`() {
         // GIVEN
-        val scissors = Result.SCISSORS
-        val rock = Result.ROCK
+        val scissors = GameElement.SCISSORS
+        val rock = GameElement.ROCK
 
         // WHEN
         val result = scissors.beats(rock)
@@ -61,10 +61,10 @@ internal class ResultTest{
     }
 
     @Test
-    internal fun `Paper should beat Rock`() {
+    internal fun `paper should beat rock`() {
         // GIVEN
-        val paper = Result.PAPER
-        val rock = Result.ROCK
+        val paper = GameElement.PAPER
+        val rock = GameElement.ROCK
 
         // WHEN
         val result = paper.beats(rock)
@@ -74,10 +74,10 @@ internal class ResultTest{
     }
 
     @Test
-    internal fun `Paper should not beat Scissors`() {
+    internal fun `paper should not beat scissors`() {
         // GIVEN
-        val paper = Result.PAPER
-        val scissors = Result.SCISSORS
+        val paper = GameElement.PAPER
+        val scissors = GameElement.SCISSORS
 
         // WHEN
         val result = paper.beats(scissors)

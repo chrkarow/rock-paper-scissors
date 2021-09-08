@@ -1,9 +1,11 @@
 package de.cka.rockpaperscissors
 
-enum class Result(private val beatingRule: (Result) -> Boolean) {
+enum class GameElement(
+    private val beatingRule: (GameElement) -> Boolean
+) {
     ROCK(beatingRule = { it == SCISSORS }),
     PAPER(beatingRule = { it == ROCK }),
     SCISSORS(beatingRule = { it == PAPER });
 
-    fun beats(other: Result) = beatingRule.invoke(other)
+    fun beats(other: GameElement) = beatingRule.invoke(other)
 }
