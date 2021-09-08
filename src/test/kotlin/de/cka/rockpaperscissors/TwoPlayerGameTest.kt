@@ -51,7 +51,7 @@ internal class TwoPlayerGameTest {
     }
 
     @Test
-    internal fun `both player should draw`() {
+    internal fun `both players should draw`() {
 
         // GIVEN
         val playerMock1 = mock<Player> { on { choose() } doReturn GameElement.PAPER }
